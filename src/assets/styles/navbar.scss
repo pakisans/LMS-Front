@@ -1,0 +1,26 @@
+.title {
+  font-family: "titleFont";
+  font-size: 2.8em;
+  color: #000;
+  &:hover {
+    color: #000;
+  }
+}
+
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EF8354;
+}
+
+.inner-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}

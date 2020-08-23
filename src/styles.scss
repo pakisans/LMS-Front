@@ -1,0 +1,20 @@
+@import "../src/assets/styles/navbar.scss";
+@import "../src/assets/styles/components";
+@import "../src/assets/styles/fonts";
+@import "../src/assets/styles/home";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+body{
+  background-color: #BFC0C0;
+}
