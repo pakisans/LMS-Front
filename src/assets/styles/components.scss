@@ -6,6 +6,7 @@
   height: 90%;
   border-radius: 1rem;
   margin-right: 10px;
+
   &:hover {
     background-color: #ffffff;
     color: #000000;
@@ -13,31 +14,32 @@
   }
 }
 
-.outlined{
+.outlined {
   background-color: #fff;
-  &:hover{
+
+  &:hover {
     border-color: #fff;
   }
 }
 
-.form-control{
+.form-control {
   border-radius: 1rem;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
 }
 
-.icons{
+.icons {
   margin-right: 5px;
 }
 
-.card{
+.card {
   border-radius: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
 
 //Home//
-.lead-container{
+.lead-container {
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -46,11 +48,11 @@
   align-items: flex-start;
 }
 
-.menu-item{
+.menu-item {
   border-radius: 50%;
 }
 
-.exam-item{
+.exam-item {
   border-radius: 2rem;
   border-color: #EF8354;
   width: 150px;
@@ -61,28 +63,30 @@
   justify-content: center;
 }
 
-.subject{
+.subject {
   width: 180px;
   height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   padding: 10px;
   margin: 0.8em;
   cursor: pointer;
   border-color: #EF8354;
+
   &:hover {
     box-shadow: 0 0 15px #BFC0C0;
     transition: box-shadow 0.3s ease-in-out;
   }
-  .subject-icon{
+
+  .subject-icon {
     width: 100px;
     height: 100px;
   }
 }
 
-.subject-title{
+.subject-title {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
