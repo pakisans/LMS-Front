@@ -13,6 +13,8 @@ import {StudentHomeComponent} from './student-home/student-home.component';
 import {TutorHomeComponent} from './tutor-home/tutor-home.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {MyExamsComponent} from './my-exams/my-exams.component';
+import {MyConversationsComponent} from './my-conversations/my-conversations.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import {MyExamsComponent} from './my-exams/my-exams.component';
     StudentHomeComponent,
     TutorHomeComponent,
     DashboardComponent,
-    MyExamsComponent
+    MyExamsComponent,
+    MyConversationsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
