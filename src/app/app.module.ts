@@ -15,6 +15,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {MyExamsComponent} from './my-exams/my-exams.component';
 import {MyConversationsComponent} from './my-conversations/my-conversations.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     TutorHomeComponent,
     DashboardComponent,
     MyExamsComponent,
-    MyConversationsComponent
+    MyConversationsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

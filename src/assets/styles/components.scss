@@ -14,6 +14,15 @@
   }
 }
 
+.btn-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .outlined {
   background-color: #fff;
 
@@ -88,4 +97,19 @@
 .subject-title {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+}
+
+//Profile//
+.profile-card{
+  width: 350px;
+  height: 400px;
+  justify-content: space-around;
+  padding: 1em;
+  cursor: default;
+}
+
+.profile-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
