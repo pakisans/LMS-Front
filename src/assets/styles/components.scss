@@ -44,6 +44,7 @@
 .card {
   margin-right: auto;
   margin-left: auto;
+  border-color: #EF8354;
 }
 
 //Home//
@@ -112,4 +113,16 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
+}
+
+//Notifications//
+.notifications-card{
+  width: 90%;
+  height: 400px;
+  justify-content: flex-start;
+  padding: 1em;
+  cursor: default;
+  border-color: #EF8354;
+  margin-top: 2em;
+
 }

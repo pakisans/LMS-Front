@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "LMS": {
+    "skyline-institute": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/LMS",
+            "outputPath": "dist/skyline-institute",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "LMS:build"
+            "browserTarget": "skyline-institute:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "LMS:build:production"
+              "browserTarget": "skyline-institute:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "LMS:build"
+            "browserTarget": "skyline-institute:build"
           }
         },
         "test": {
@@ -110,16 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "LMS:serve"
+            "devServerTarget": "skyline-institute:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "LMS:serve:production"
+              "devServerTarget": "skyline-institute:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "LMS"
+    }},
+  "defaultProject": "skyline-institute"
 }

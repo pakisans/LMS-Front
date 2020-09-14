@@ -1,45 +1,44 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import {AppComponent} from './app.component';
-import {NavbarComponent} from './navbar/navbar.component';
-import {RouterModule} from '@angular/router';
-import {AppRoutingModule} from './app-routing.module';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './register/register.component';
-import {MySubjectsComponent} from './my-subjects/my-subjects.component';
-import {MainMenuComponent} from './main-menu/main-menu.component';
-import {StudentHomeComponent} from './student-home/student-home.component';
-import {TutorHomeComponent} from './tutor-home/tutor-home.component';
-import {DashboardComponent} from './dashboard/dashboard.component';
-import {MyExamsComponent} from './my-exams/my-exams.component';
-import {MyConversationsComponent} from './my-conversations/my-conversations.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import { ProfileComponent } from './profile/profile.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from "./navbar/navbar.component";
+import { LoginComponent } from "./login/login.component";
+import { SignupComponent } from "./signup/signup.component";
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { StudentHomeComponent } from "./components/student-home/student-home.component";
+import { TutorHomeComponent } from "./components/tutor-home/tutor-home.component";
+import { MainMenuComponent } from "./main-menu/main-menu.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { MyConversationsComponent } from "./components/my-conversations/my-conversations.component";
+import { MySubjectsComponent } from "./components/my-subjects/my-subjects.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { NotificationsComponent } from './notifications/notifications.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    RegisterComponent,
-    MySubjectsComponent,
-    MainMenuComponent,
+    SignupComponent,
+    DashboardComponent,
     StudentHomeComponent,
     TutorHomeComponent,
-    DashboardComponent,
-    MyExamsComponent,
+    MainMenuComponent,
+    ProfileComponent,
     MyConversationsComponent,
-    ProfileComponent
+    MySubjectsComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

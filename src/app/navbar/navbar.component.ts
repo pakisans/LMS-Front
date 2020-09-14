@@ -13,6 +13,10 @@ export class NavbarComponent implements OnInit {
   ) {
   }
 
+  goToNotifications(): void {
+    this.router.navigate(['/notifications'])
+  }
+
   goToProfile(): void {
     this.router.navigate(['/profile']);
   }
