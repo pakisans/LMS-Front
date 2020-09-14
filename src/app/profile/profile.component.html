@@ -2,7 +2,7 @@
   <div class="subject card profile-card">
     <h4 class="subject-title">
       <b>
-      User Name and Surname
+        User Name and Surname
       </b>
     </h4>
     <img src="../../assets/icons/profile-test.png" class="profile-img"/>
@@ -12,8 +12,46 @@
       <span class="glyphicon glyphicon-gift"></span>🎁 <b>Date of Birth</b>: dob
     </p>
     <div class="btn-group">
-      <button class="btn btn-lg">Edit</button>
-      <button class="btn btn-lg">Delete</button>
+      <button class="btn btn-lg" (click)="openEditProfileModal()">Edit</button>
+      <button class="btn btn-lg" (click)="openPromptDelete()">Delete</button>
     </div>
   </div>
 </div>
+<jw-modal id="edit-profile">
+  <h4 class="subject-title">
+    <b>
+      User Name and Surname
+    </b>
+  </h4>
+  <form class="form-signin">
+    <div class="form-label-group">
+      <input class="form-control form-control-lg" formControlName="email" type="text" placeholder="Name" required>
+    </div>
+
+    <div class="form-label-group">
+      <input class="form-control form-control-lg" formControlName="password" type="text" placeholder="Surname"
+             required style="margin-bottom: 10px;">
+    </div>
+
+    <div class="form-label-group">
+      <input class="form-control form-control-lg" formControlName="email" type="text" placeholder="Email" required>
+    </div>
+  </form>
+  <hr class="divider">
+  <div>
+    <button class="btn btn-block text-uppercase button" (click)="confirmEdit()">Confirm</button>
+    <button class="btn btn-block text-uppercase button" (click)="closeEditProfileModal();">Close</button>
+  </div>
+</jw-modal>
+<jw-modal id="prompt-delete">
+  <h4 class="subject-title">
+    <b>
+      Are you sure you want to delete your profile?
+    </b>
+  </h4>
+  <hr class="divider">
+  <div>
+    <button class="btn btn-block text-uppercase button" (click)="confirmDelete()">Confirm</button>
+    <button class="btn btn-block text-uppercase button" (click)="closePromptDelete();">Close</button>
+  </div>
+</jw-modal>

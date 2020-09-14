@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { LoginComponent } from "./login/login.component";
@@ -13,9 +15,10 @@ import { MainMenuComponent } from "./main-menu/main-menu.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { MyConversationsComponent } from "./components/my-conversations/my-conversations.component";
 import { MySubjectsComponent } from "./components/my-subjects/my-subjects.component";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalModule } from "./components/_modal";
 
 @NgModule({
   declarations: [
@@ -35,8 +38,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    HttpClientModule,
+    NgbModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

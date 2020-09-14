@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from "../components/_modal";
+import { User } from "../models/user";
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  user: User = new User;
+
+  constructor(
+    private ms: ModalService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  openEditProfileModal(){
+    this.ms.open("edit-profile");
+  }
+
+  closeEditProfileModal(){
+    this.ms.close("edit-profile");
+  }
+
+  openPromptDelete(){
+    this.ms.open("prompt-delete")
+  }
+
+  closePromptDelete(){
+    this.ms.close("prompt-delete")
+  }
+
+  confirmEdit(){
+
+  }
+
+  confirmDelete(){
+
   }
 
 }
