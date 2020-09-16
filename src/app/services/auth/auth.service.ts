@@ -28,6 +28,14 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
+  isLoggedIn(){
+    if(localStorage.getItem("token")){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   login(username: string, password: string) {
     let user = { "username": username, "password": password }
     this.http.post<LoginRes>(`${this.url}`, user).subscribe(res => {

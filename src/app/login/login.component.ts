@@ -30,22 +30,24 @@ export class LoginComponent implements OnInit {
 
   login(username: string, password: string) {
     console.log(username)
-    if (this.ls.login(username, password)) {
-      console.log(username)
-      this.role = localStorage.getItem("role");
-      if ((this.role == roleEnum.admin)) {
-        this.router.navigateByUrl('/dashboard')
-      }
-      else if (this.role == roleEnum.teacher) {
-        this.router.navigateByUrl('/tutorHome')
-      }
-      else if (this.role == roleEnum.student) {
-        this.router.navigateByUrl('/studentHome')
-      }
-    }
-    else {
-      console.error("Cannot Login")
-    }
+    localStorage.setItem("token", username);
+    this.router.navigate(['/studentHome'])
+    // if (this.ls.login(username, password)) {
+    //   console.log(username)
+    //   this.role = localStorage.getItem("role");
+    //   if ((this.role == roleEnum.admin)) {
+    //     this.router.navigateByUrl('/dashboard')
+    //   }
+    //   else if (this.role == roleEnum.teacher) {
+    //     this.router.navigateByUrl('/tutorHome')
+    //   }
+    //   else if (this.role == roleEnum.student) {
+    //     this.router.navigateByUrl('/studentHome')
+    //   }
+    // }
+    // else {
+    //   console.error("Cannot Login")
+    // }
 
   }
 

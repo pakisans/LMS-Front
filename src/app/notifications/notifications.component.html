@@ -11,14 +11,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let notification of notifications; index as i">
+    <tr *ngFor="let notification of notifications; index as i" class="table-item">
       <th scope="row">{{ i + 1 }}</th>
       <td>
         {{notification.description}}
       </td>
       <td>{{notification.from}}</td>
       <td>{{notification.time}}</td>
-      <td> -Actions- </td>
+      <td class="table-actions"><i class="fa fa-eye table-action"></i><i class="fa fa-minus-circle table-action"></i></td>
     </tr>
     </tbody>
   </table>

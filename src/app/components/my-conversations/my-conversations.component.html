@@ -1,5 +1,19 @@
-<div class="lead-container">
-  <div class="subject card">
-    <img class="sender-img" src=""/>
-  </div>
-</div>
+<table class="table table-striped conversation-table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Content</th>
+    <th scope="col">From</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let conversation of conversations; index as i" class="table-item">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      {{conversation.content}}
+    </td>
+    <td>{{conversation.from}}</td>
+    <td class="table-actions"><i class="fa fa-eye table-action"></i><i class="fa fa-minus-circle table-action"></i></td>
+  </tr>
+  </tbody>
+</table>

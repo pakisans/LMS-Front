@@ -3,11 +3,11 @@
   <div class="card-body">
     <form class="form-signin">
       <div class="form-label-group">
-        <input class="form-control form-control-lg" formControlName="email" [(ngModel)]="username" type="text" placeholder="Email" required>
+        <input class="form-control form-control-lg" name="username" [(ngModel)]="username" type="text" placeholder="Username" required>
       </div>
 
       <div class="form-label-group">
-        <input class="form-control form-control-lg" formControlName="password" [(ngModel)]="password" type="password" placeholder="Password"
+        <input class="form-control form-control-lg" name="password" [(ngModel)]="password" type="password" placeholder="Password"
                required style="margin-bottom: 10px;">
       </div>
       <button class="btn btn-lg" (click)="login(username, password)" style="width: 45%">Login</button>
