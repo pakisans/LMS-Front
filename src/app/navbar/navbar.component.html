@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="height: 13vh">
+<!-- <nav class="navbar navbar-expand-lg" style="height: 13vh">
   <a class="navbar-brand title"><img class="logo" src="../../assets/icons/urban.svg">Skyline Institute</a>
   <div class="inner-nav">
     <button class="btn" *ngIf="isLoggedIn()" (click)="goToNotifications()">
@@ -11,4 +11,106 @@
       <i class="fa fa-sign-out icons"></i>Login
     </button>
   </div>
-</nav>
+</nav> -->
+
+<mat-toolbar class="nav">
+  <div>
+    <span>SkyLineInstitute</span>
+  </div>
+  <div>
+    <button
+      mat-button
+      [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+    >
+      Home
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="univerzitet">University</button>
+    <mat-menu #univerzitet="matMenu">
+      <button mat-menu-item>About university</button>
+      <button mat-menu-item>Contact and location</button>
+      <button mat-menu-item>Rector</button>
+    </mat-menu>
+    <span class="example-spacer"></span>
+
+    <button mat-button [matMenuTriggerFor]="fakulteti">Faculties</button>
+    <mat-menu #fakulteti="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="vertebrates">
+        Vertebrates
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="invertebrates">
+        Invertebrates
+      </button>
+    </mat-menu>
+
+    <mat-menu #vertebrates="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+      <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+      <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+      <button mat-menu-item>Birds</button>
+      <button mat-menu-item>Mammals</button>
+    </mat-menu>
+
+    <mat-menu #invertebrates="matMenu">
+      <button mat-menu-item>Insects</button>
+      <button mat-menu-item>Molluscs</button>
+      <button mat-menu-item>Crustaceans</button>
+      <button mat-menu-item>Corals</button>
+      <button mat-menu-item>Arachnids</button>
+      <button mat-menu-item>Velvet worms</button>
+      <button mat-menu-item>Horseshoe crabs</button>
+    </mat-menu>
+
+    <mat-menu #fish="matMenu">
+      <button mat-menu-item>Baikal oilfish</button>
+      <button mat-menu-item>Bala shark</button>
+      <button mat-menu-item>Ballan wrasse</button>
+      <button mat-menu-item>Bamboo shark</button>
+      <button mat-menu-item>Banded killifish</button>
+    </mat-menu>
+
+    <mat-menu #amphibians="matMenu">
+      <button mat-menu-item>Sonoran desert toad</button>
+      <button mat-menu-item>Western toad</button>
+      <button mat-menu-item>Arroyo toad</button>
+      <button mat-menu-item>Yosemite toad</button>
+    </mat-menu>
+
+    <mat-menu #reptiles="matMenu">
+      <button mat-menu-item>Banded Day Gecko</button>
+      <button mat-menu-item>Banded Gila Monster</button>
+      <button mat-menu-item>Black Tree Monitor</button>
+      <button mat-menu-item>Blue Spiny Lizard</button>
+      <button mat-menu-item disabled>Velociraptor</button>
+    </mat-menu>
+
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="dekani">Deans</button>
+    <mat-menu #dekani="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="programi">Study programs</button>
+    <mat-menu #programi="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <ng-container *ngIf="!loginCheck; else loggedIn">
+      <button (click)="goToLogin()" mat-button>
+        Login
+        <mat-icon>login</mat-icon>
+      </button>
+    </ng-container>
+
+    <ng-template #loggedIn>
+      <button (click)="goToNotifications()" mat-button>Notifications</button>
+      <button (click)="goToProfile()" mat-button>Profile</button>
+      <button (click)="logOut()" mat-button>
+        Logout
+        <mat-icon>login</mat-icon>
+      </button>
+    </ng-template>
+  </div>
+</mat-toolbar>

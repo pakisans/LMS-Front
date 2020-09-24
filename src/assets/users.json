@@ -1,0 +1,55 @@
+[
+  {
+    "id": "e43c0717-2e06-4666-acb4-62e9c188ee5d",
+    "firstName": "adminFirstName",
+    "lastName": "adminLastName",
+    "user": { "username": "admin", "password": "admin", "role": "admin" }
+  },
+  {
+    "id": "bf6b79da-7c42-4d4e-bdb1-d81495dfda4a",
+    "firstName": "student1",
+    "lastName": "student1",
+    "user": {
+      "username": "student1",
+      "password": "student1",
+      "role": "student"
+    },
+    "cardNumber": 1
+  },
+  {
+    "id": "311675c1-341c-4a70-935a-ba0d5d67bad9",
+    "firstName": "student2",
+    "lastName": "student2",
+    "user": {
+      "username": "student2",
+      "password": "student2",
+      "role": "student"
+    },
+    "cardNumber": 2
+  },
+  {
+    "id": "77993777-8c34-474d-9f3b-98e9068815e3",
+    "firstName": "student3",
+    "lastName": "student3",
+    "user": {
+      "username": "student3",
+      "password": "student3",
+      "role": "student"
+    },
+    "cardNumber": 3
+  },
+  {
+    "id": "e1147d32-700b-4388-8bbe-b8c4848cc8f6",
+    "firstName": "tutor1",
+    "lastName": "tutor1",
+    "user": { "username": "tutor1", "password": "tutor1", "role": "tutor" },
+    "personalIdentificationNumber": 1
+  },
+  {
+    "id": "d02e822c-251e-463a-b7d8-8647c0a01bb7",
+    "firstName": "tutor2",
+    "lastName": "tutor2",
+    "user": { "username": "tutor2", "password": "tutor2", "role": "tutor" },
+    "personalIdentificationNumber": 2
+  }
+]

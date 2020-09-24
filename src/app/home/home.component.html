@@ -1,0 +1,9 @@
+<ng-container *ngIf="user === 'unregistered'">
+  <app-unregistered-home></app-unregistered-home>
+</ng-container>
+<ng-container *ngIf="user === 'student'">
+  <app-student-home></app-student-home>
+</ng-container>
+<ng-container *ngIf="user === 'professor'">
+  <app-tutor-home></app-tutor-home>
+</ng-container>

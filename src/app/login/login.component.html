@@ -1,18 +1,113 @@
-<div class="card" style="width: 500px; margin-top: 100px">
+<div *ngIf="loginTemplate" class="card" style="width: 500px; margin-top: 100px">
   <h2 class="subtitle">Login</h2>
   <div class="card-body">
     <form class="form-signin">
       <div class="form-label-group">
-        <input class="form-control form-control-lg" name="username" [(ngModel)]="username" type="text" placeholder="Username" required>
+        <input
+          class="form-control form-control-lg"
+          name="username"
+          [(ngModel)]="username"
+          type="text"
+          placeholder="Username"
+          required
+        />
       </div>
 
       <div class="form-label-group">
-        <input class="form-control form-control-lg" name="password" [(ngModel)]="password" type="password" placeholder="Password"
-               required style="margin-bottom: 10px;">
+        <input
+          class="form-control form-control-lg"
+          name="password"
+          [(ngModel)]="password"
+          type="password"
+          placeholder="Password"
+          required
+          style="margin-bottom: 10px"
+        />
       </div>
-      <button class="btn btn-lg" (click)="login(username, password)" style="width: 45%">Login</button>
-      <button class="btn outlined btn-lg" routerLink="/register" style="width: 45%">Register</button>
-      <hr class="divider">
+      <button
+        class="btn btn-lg"
+        (click)="login(username, password)"
+        style="width: 45%"
+      >
+        Login
+      </button>
+      <button
+        class="btn outlined btn-lg"
+        (click)="registerTemplate()"
+        style="width: 45%"
+      >
+        Register
+      </button>
+      <hr class="divider" />
+    </form>
+  </div>
+</div>
+
+<div
+  *ngIf="!loginTemplate"
+  class="card"
+  style="width: 500px; margin-top: 100px"
+>
+  <h2 class="subtitle">Login</h2>
+  <div class="card-body">
+    <form class="form-signin">
+      <div class="form-label-group">
+        <input
+          class="form-control form-control-lg"
+          name="firstName"
+          [(ngModel)]="firstName"
+          type="text"
+          placeholder="First name"
+          required
+        />
+      </div>
+      <div class="form-label-group">
+        <input
+          class="form-control form-control-lg"
+          name="lastName"
+          [(ngModel)]="lastName"
+          type="text"
+          placeholder="Last name"
+          required
+        />
+      </div>
+      <div class="form-label-group">
+        <input
+          class="form-control form-control-lg"
+          name="username"
+          [(ngModel)]="username"
+          type="text"
+          placeholder="Username"
+          required
+        />
+      </div>
+
+      <div class="form-label-group">
+        <input
+          class="form-control form-control-lg"
+          name="password"
+          [(ngModel)]="password"
+          type="password"
+          placeholder="Password"
+          required
+          style="margin-bottom: 10px"
+        />
+      </div>
+      <button
+        class="btn btn-lg"
+        (click)="register(username, password, firstName, lastName)"
+        style="width: 45%"
+      >
+        Register
+      </button>
+      <button
+        class="btn btn-lg"
+        (click)="registerTemplate()"
+        style="width: 45%"
+      >
+        Cancel
+      </button>
+      <hr class="divider" />
     </form>
   </div>
 </div>
